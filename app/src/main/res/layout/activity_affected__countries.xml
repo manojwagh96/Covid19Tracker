@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Affected_Countries">
+
+
+    <EditText
+        android:id="@+id/searchCountries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/custom_search_bg"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="15dp"
+        android:hint="@string/search"
+        android:padding="12dp"
+        android:paddingLeft="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/countriesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchCountries"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/countries_row" />
+
+</RelativeLayout>
